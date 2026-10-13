@@ -1,37 +1,29 @@
 @import 'tailwindcss';
 
-@font-face { font-family: "Figtree:Light Italic"; src: url("https://static.figma.com/font/Figtree-Italic_wght__2") format("woff2"); font-style: italic; font-weight: 300; }
-@font-face { font-family: "Figtree:Light"; src: url("https://static.figma.com/font/Figtree_wght__2") format("woff2"); font-style: normal; font-weight: 300; }
-@font-face { font-family: "Figtree:Regular"; src: url("https://static.figma.com/font/Figtree_wght__2") format("woff2"); font-style: normal; font-weight: 400; }
-@font-face { font-family: "Figtree:Medium"; src: url("https://static.figma.com/font/Figtree_wght__2") format("woff2"); font-style: normal; font-weight: 500; }
-@font-face { font-family: "Figtree:SemiBold"; src: url("https://static.figma.com/font/Figtree_wght__2") format("woff2"); font-style: normal; font-weight: 600; }
-@font-face { font-family: "Hanken Grotesk:Medium"; src: url("https://static.figma.com/font/HankenGrotesk_wght__1") format("woff2"); font-style: normal; font-weight: 500; }
-@font-face { font-family: "Outfit:ExtraLight"; src: url("https://static.figma.com/font/Outfit_wght__2") format("woff2"); font-style: normal; font-weight: 200; }
-@font-face { font-family: "Outfit:Regular"; src: url("https://static.figma.com/font/Outfit_wght__2") format("woff2"); font-style: normal; font-weight: 400; }
-@font-face { font-family: "Outfit:Medium"; src: url("https://static.figma.com/font/Outfit_wght__2") format("woff2"); font-style: normal; font-weight: 500; }
+/* Fonts load from Google Fonts (see index.html): Figtree, Hanken Grotesk, Outfit */
 
-:root { color: #1f1d1c; background: white; font-family: "Figtree:Regular", sans-serif; font-synthesis: none; }
+:root { color: #1f1d1c; background: white; font-family: "Figtree", sans-serif; font-weight: 400; font-synthesis: none; }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body { margin: 0; }
 a { color: inherit; text-decoration: none; }
 nav { height: 72px; padding: 0 clamp(24px, 5vw, 72px); display: flex; align-items: center; justify-content: space-between; color: white; background: linear-gradient(90deg, #6466f7, #2dac69); }
-.logo { display: flex; align-items: center; gap: 16px; font-family: "Hanken Grotesk:Medium"; font-size: 18px; letter-spacing: 4.3px; white-space: nowrap; }
+.logo { display: flex; align-items: center; gap: 16px; font-family: "Hanken Grotesk", sans-serif; font-weight: 500; font-size: 18px; letter-spacing: 4.3px; white-space: nowrap; }
 .mark { width: 36px; height: 36px; display: grid; place-items: center; position: relative; }
 .mark img:first-child { width: 36px; height: 36px; }
 .mark img:last-child { width: 29px; position: absolute; }
-.navlinks, footer div { display: flex; gap: 40px; font-family: "Figtree:Medium"; }
-.pill { display: inline-flex; justify-content: center; align-items: center; border-radius: 18px; padding: 18px 30px; font-family: "Figtree:SemiBold"; }
+.navlinks, footer div { display: flex; gap: 40px; font-family: "Figtree", sans-serif; font-weight: 500; }
+.pill { display: inline-flex; justify-content: center; align-items: center; border-radius: 18px; padding: 18px 30px; font-family: "Figtree", sans-serif; font-weight: 600; }
 .pill.light { color: #1f1d1c; background: white; border-radius: 999px; padding: 13px 24px; }
 .dark { background: #1f1d1c; color: white; }
 .soft { background: #f4f4f4; }
 .hero, .section { max-width: 1440px; margin: auto; padding: 112px clamp(24px, 5vw, 72px); position: relative; }
 .hero { min-height: 650px; display: flex; flex-direction: column; align-items: flex-start; gap: 50px; }
-h1, h2, .cta h2 { margin: 0; font-family: "Outfit:ExtraLight"; font-weight: 200; letter-spacing: -.035em; }
+h1, h2, .cta h2 { margin: 0; font-family: "Outfit", sans-serif; font-weight: 200; letter-spacing: -.035em; }
 h1 { font-size: clamp(44px, 5vw, 72px); line-height: .98; max-width: 1296px; }
-h1 strong, h2 strong { font-family: "Outfit:Regular"; font-weight: 400; }
-.quote { max-width: 920px; margin: 0; font-family: "Figtree:Light Italic"; font-style: italic; font-size: clamp(16px, 1.67vw, 24px); line-height: 1.25; }
-.quote span { font-family: "Figtree:Light"; font-style: normal; }
+h1 strong, h2 strong { font-family: "Outfit", sans-serif; font-weight: 400; }
+.quote { max-width: 920px; margin: 0; font-family: "Figtree", sans-serif; font-weight: 300; font-style: italic; font-size: clamp(16px, 1.67vw, 24px); line-height: 1.25; }
+.quote span { font-family: "Figtree", sans-serif; font-weight: 300; font-style: normal; }
 .buttons { display: flex; gap: 14px; }
 .mantis { width: 346px; position: absolute; right: 5vw; bottom: 76px; }
 .section { border-top: 1px solid transparent; border-image: linear-gradient(90deg,#6466f7,#2dac69) 1; }
@@ -43,14 +35,14 @@ h1 strong, h2 strong { font-family: "Outfit:Regular"; font-weight: 400; }
 .service { background: rgba(98,103,242,.1); min-height: 330px; }
 .reason { background: rgba(71,135,175,.1); min-height: 220px; }
 .method { background: rgba(42,167,103,.1); min-height: 320px; }
-.card h3, .project h3, .team h3 { margin: 0 0 14px; font-family: "Outfit:Medium"; font-weight: 500; font-size: 26px; }
+.card h3, .project h3, .team h3 { margin: 0 0 14px; font-family: "Outfit", sans-serif; font-weight: 500; font-size: 26px; }
 .card p, .project p, .team p { color: #5c5a58; line-height: 1.55; margin: 0 0 18px; }
 .method > img { width: 50px; height: 50px; margin-bottom: 14px; }
 .project-list { display: grid; gap: 40px; }
 .project { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: center; }
 .project h3 { display: flex; align-items: center; gap: 12px; margin-bottom: 6px; }
 .project h3 img { width: 28px; height: 28px; }
-.project b { margin-left: 40px; font-family: "Figtree:SemiBold"; }
+.project b { margin-left: 40px; font-family: "Figtree", sans-serif; font-weight: 600; }
 .team { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
 .team article { display: flex; align-items: center; gap: 36px; }
 .team img { width: min(46%, 300px); aspect-ratio: 1; object-fit: contain; }
@@ -63,6 +55,13 @@ label { display: flex; flex-direction: column; gap: 8px; }
 input, textarea { width: 100%; border: 1px solid #d9d9d9; border-radius: 14px; padding: 12px 16px; font: inherit; outline-color: #6466f7; }
 textarea { min-height: 80px; resize: vertical; }
 button { border: 0; border-radius: 14px; padding: 12px; color: white; background: #2c2c2c; font: inherit; cursor: pointer; }
+button:disabled { opacity: .6; cursor: wait; }
+.honey { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+.form-error { margin: 0; color: #b42318; font-size: 14px; line-height: 1.4; }
+.form-done { border: 1px solid #d9d9d9; border-radius: 28px; padding: 32px 24px; display: flex; flex-direction: column; justify-content: center; gap: 12px; }
+.form-done h3 { margin: 0; font-family: "Outfit", sans-serif; font-weight: 500; font-size: 24px; }
+.form-done p { margin: 0; color: #5c5a58; line-height: 1.5; }
+.form-done button { align-self: flex-start; padding: 12px 20px; }
 footer { max-width: 1440px; margin: auto; padding: 56px clamp(24px,5vw,72px); display: flex; align-items: center; justify-content: space-between; }
 footer .logo { color: #1f1d1c; }
 footer .mark { display: none; }
