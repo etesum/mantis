@@ -13,7 +13,7 @@ npm run build    # production build in dist/
 ## Contact form
 
 The form posts to [FormSubmit](https://formsubmit.co), which emails each submission to
-melp.meredith@gmail.com (CC etesum1997@gmail.com). The addresses live at the top of `src/App.tsx`.
+etesum1997@gmail.com (CC melp.meredith@gmail.com). The addresses live at the top of `src/App.tsx`.
 
 ## Deploy
 

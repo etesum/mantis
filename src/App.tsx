@@ -2,9 +2,10 @@ import { useState, type FormEvent, type ReactNode } from "react";
 
 const A = "/assets";
 
-// Submissions are emailed via FormSubmit (formsubmit.co) to the primary address, CC'd to the second.
-const FORM_ENDPOINT = "https://formsubmit.co/ajax/melp.meredith@gmail.com";
-const FORM_CC = "etesum1997@gmail.com";
+// Submissions are emailed via FormSubmit (formsubmit.co) to the primary address and CC'd to the second.
+// The primary address receives FormSubmit's one-time activation email.
+const FORM_ENDPOINT = "https://formsubmit.co/ajax/etesum1997@gmail.com";
+const FORM_CC = "melp.meredith@gmail.com";
 
 type Status = "idle" | "sending" | "sent" | "error";
 
