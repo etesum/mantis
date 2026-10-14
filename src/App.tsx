@@ -158,7 +158,7 @@ export default function App() {
 
     <footer>
       <a className="logo" href="#">MANTIS STUDIO</a>
-      <div className="footer-links"><a href="#services">Services</a><a href="#projects">Projects</a><a href="#">LinkedIn</a></div>
+      <div className="footer-links"><a href="#services">Services</a><a href="#projects">Projects</a><a href="https://www.linkedin.com/company/mantis-studio-ux/" target="_blank" rel="noopener noreferrer">LinkedIn</a></div>
       <p>USA · © 2026</p>
     </footer>
   </>;
