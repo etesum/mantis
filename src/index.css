@@ -72,11 +72,13 @@ h2 strong.medium { font-weight: 500; }
 .method-icon.holistic img, .method-icon.ai img { left: 4.5px; top: 4.5px; width: 55px; }
 
 /* Selected work */
-.project-list { display: flex; flex-direction: column; gap: 48px; }
-.project { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; column-gap: 32px; row-gap: 12px; }
-.project h3 { display: flex; align-items: center; gap: 31px; font-size: 28px; }
+/* Desktop/tablet: one shared grid so every description starts at the same left edge.
+   Left column fits the widest logo + name; right column is 642px at 1440 and shrinks. */
+.project-list { display: grid; grid-template-columns: auto minmax(0, 642px); justify-content: space-between; align-items: center; column-gap: 32px; row-gap: 48px; }
+.project { display: contents; }
+.project h3 { display: flex; align-items: center; gap: 31px; font-size: 28px; white-space: nowrap; }
 .project h3 img { width: 100px; height: 100px; flex: none; }
-.project p { flex: 0 1 642px; margin: 0; font-size: 16px; line-height: 1.2; }
+.project p { margin: 0; font-size: 16px; line-height: 1.2; }
 
 /* Team */
 .team-section { padding-top: clamp(38px, 8.3vw, 120px); padding-bottom: clamp(38px, 8.3vw, 120px); }
@@ -122,7 +124,8 @@ footer p { margin: 0; font-weight: 300; font-size: 15px; color: var(--muted); }
 @media (max-width: 1099px) {
   .four { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .service, .reason, .method { min-height: 0; }
-  .project p { flex-basis: 100%; }
+  .project h3 { gap: 20px; font-size: 24px; }
+  .project h3 img { width: 72px; height: 72px; }
   .team { flex-direction: column; gap: 48px; }
   .team article { flex: none; }
   .team article > div { min-height: 0; }
@@ -141,7 +144,8 @@ footer p { margin: 0; font-weight: 300; font-size: 15px; color: var(--muted); }
   .four, .two { grid-template-columns: 1fr; }
   .card { padding: 24px; border-radius: 24px; }
   .card h3, .team h3 { font-size: 22px; }
-  .project-list { gap: 32px; }
+  .project-list { display: flex; flex-direction: column; gap: 32px; }
+  .project { display: flex; flex-direction: column; gap: 12px; }
   .project h3 { gap: 12px; font-size: 22px; }
   .project h3 img { width: 28px; height: 28px; }
   .project p { font-size: 15px; line-height: 1.45; }
